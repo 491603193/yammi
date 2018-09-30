@@ -1,10 +1,9 @@
-import Home from '../views/Home.vue'
-import index from '../views/index.vue'
+import Index from '../views/Index.vue'
 const routers =     [
     {
         path: '/',
         name: 'index',
-        component: index
+        component: Index
     },
     {
         path: '/about',
