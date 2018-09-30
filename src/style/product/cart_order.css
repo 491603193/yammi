@@ -1,0 +1,128 @@
+body,html{
+    background-color: #fff;
+}
+.book-top .flex-1 div:last-of-type {
+    margin-top: 5px;
+}
+.book-top .icon-go {
+    line-height: 45px;
+    margin-left: 5px;
+}
+.ul-three .detail {
+    padding-top: 6px;
+}
+.ul-three .money {
+    padding-top: 3px;
+}
+.remove-wrap {
+    line-height: 79px;
+    margin-left: 5px;
+}
+.remove-wrap img {
+    display: inline-block;
+    width: 12px;
+}
+.btn-wrap {
+    padding: 12% 15px 5%;
+}
+.color-red {
+    color: #ff2929 !important;
+}
+.ul-three .title {
+    line-height: 20px;
+}
+.ul-three .detail {
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+}
+li {
+    padding: 10px 15px;
+}
+.book-top .flex-1 div:last-of-type {
+    margin-top: 0;
+}
+.book-top .flex-1 div:last-of-type {
+    padding-top: 6px;
+}
+[v-cloak] {
+    display: none;
+}
+.pop-pay, .pop-add-account {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 300;
+}
+.pop-pay .bar {
+    background-color: #fc9abe;
+    line-height: 35px;
+    padding: 0 4%;
+    color: #fff;
+}
+.pop-pay .bar .icon-cancle {
+    font-size: 22px;
+    line-height: 35px;
+}
+.pop-pay .title {
+    line-height: 20px;
+    padding: 4%;
+    font-size: 16px;
+}
+.pop-pay ul {
+    margin: 0 4%;
+}
+.pop-pay li {
+    border-bottom: 0;
+    padding: 0;
+}
+.pop-pay li>.horizontal {
+    padding: 2% 0;
+    line-height: 30px;
+}
+.pop-pay .ul-one li>.horizontal {
+    border-top: 1px solid #d8d8d8;
+}
+.pop-pay .ul-one li:last-of-type>.horizontal {
+    border-bottom: 1px solid #d8d8d8;
+}
+.pop-pay li .icon {
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 12px;
+    width: 30px;
+    height: 30px;
+    background-size: 100% 100%;
+}
+.pop-pay .hook {
+    line-height: 30px;
+    width: 22px;
+    height: 22px;
+    background-size: 100% 100%;
+    background-image: url(../../image/hook.svg);
+    margin-top: 4px;
+}
+.pop-pay .div-notice {
+    line-height: 16px;
+    padding: 2% 4%;
+    color: #999;
+}
+.pop-pay .btn-wrap {
+    padding: 5% 4%;
+}
+.pop-pay .btn {
+    border-radius: 22px;
+}
+.expand-transition {
+    animation: accounton .5s;
+}
+@keyframes accounton {
+    from {
+        bottom: -500px;
+    }
+    to {
+        bottom: 0;
+    }
+}

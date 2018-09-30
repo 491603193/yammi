@@ -1,0 +1,509 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+    color: #333;
+    font-size: 15px;
+    font-family: "microsoft yahei";
+    /*font-family:Verdana,"华文细黑";*/
+    /*overflow: hidden;*/
+}
+
+[v-cloak] {
+    display: none;
+}
+
+a {
+    text-decoration: none
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.horizontal {
+    display: -webkit-box;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.flex-1 {
+    -webkit-box-flex: 1;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-17 {
+    font-size: 17px;
+}
+
+.font-size-15 {
+    font-size: 15px;
+}
+
+.font-size-12 {
+    font-size: 12px;
+}
+
+.blue {
+    color: #3fa2fe;
+}
+
+.color-333 {
+    color: #333;
+}
+
+.color-666 {
+    color: #666;
+}
+
+.color-999 {
+    color: #999;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.border-no {
+    border: 0;
+}
+
+.border-top-no {
+    border-top: 0;
+}
+
+input, select {
+    /*-webkit-appearance: none;*/
+    border-radius: 0;
+    border: 0;
+}
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+select:focus {
+    background-color: #fff !important;
+}
+
+.absolute-center {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    -ms-transform: translateX(-50%) !important;
+    -webkit-transform: translateX(-50%) !important;
+    -o-transform: translateX(-50%) !important;
+    -moz-transform: translateX(-50%) !important;
+}
+
+.absolute-middle {
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    -ms-transform: translateY(-50%) !important;
+    -webkit-transform: translateY(-50%) !important;
+    -o-transform: translateY(-50%) !important;
+    -moz-transform: translateY(-50%) !important;
+}
+
+.absolute-core {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+}
+
+ul {
+    list-style: none;
+    border-top: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+li {
+    border-bottom: 1px solid #d8d8d8;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+li:active {
+    background-color: #e8e8e8;
+}
+
+.width-full {
+    width: 100%;
+}
+
+.margin-top-no {
+    margin-top: 0;
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.margin-top-45 {
+    margin-top: 45px;
+}
+
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.color-red {
+    color: #ef3f3f;
+}
+
+.color-green {
+    color: #25ae5f;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #d8d8d8;
+}
+
+/*图标*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('fonts/icomoon.eot?prikex');
+    src: url('fonts/icomoon.eot?prikex#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?prikex') format('truetype'),
+    url('fonts/icomoon.woff?prikex') format('woff'),
+    url('fonts/icomoon.svg?prikex#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-index1:before {
+    content: "\e915";
+}
+
+.icon-index2:before {
+    content: "\e916";
+}
+
+.icon-index3:before {
+    content: "\e917";
+}
+
+.icon-index4:before {
+    content: "\e918";
+}
+
+.icon-index5:before {
+    content: "\e919";
+}
+
+.icon-index6:before {
+    content: "\e91a";
+}
+
+.icon-pay_charge:before {
+    content: "\e91b";
+}
+
+.icon-pay_select:before {
+    content: "\e91c";
+}
+
+.icon-pay_upload:before {
+    content: "\e91d";
+}
+
+.icon-submit_success:before {
+    content: "\e91e";
+}
+
+.icon-zhengshu:before {
+    content: "\e914";
+}
+
+.icon-kefu:before {
+    content: "\e913";
+}
+
+.icon-mima:before {
+    content: "\e911";
+}
+
+.icon-geren:before {
+    content: "\e912";
+}
+
+.icon-dingdanguanli:before {
+    content: "\e90b";
+}
+
+.icon-kefu2:before {
+    content: "\e90c";
+}
+
+.icon-shouruguanli:before {
+    content: "\e90d";
+}
+
+.icon-sucai:before {
+    content: "\e90e";
+}
+
+.icon-xiadan:before {
+    content: "\e90f";
+}
+
+.icon-yufukuan:before {
+    content: "\e910";
+}
+
+.icon-shezhi:before {
+    content: "\e9b3";
+}
+
+.icon-zhuanfa:before {
+    content: "\e9ac";
+}
+
+.icon-more2:before {
+    content: "\e9a6";
+}
+
+.icon-more:before {
+    content: "\e99c";
+}
+
+.icon-tanhao:before {
+    content: "\e904";
+}
+
+.icon-xiaodian:before {
+    content: "\e903";
+}
+
+.icon-xiaoxi2:before {
+    content: "\e959";
+}
+
+.icon-phone:before {
+    content: "\e940";
+}
+
+.icon-photograph:before {
+    content: "\e941";
+}
+
+.icon-scan:before {
+    content: "\e943";
+}
+
+.icon-edit:before {
+    content: "\e95a";
+}
+
+.icon-phone2:before {
+    content: "\e945";
+}
+
+.icon-share:before {
+    content: "\e96e";
+}
+
+.icon-favor:before {
+    content: "\e928";
+}
+
+.icon-favor2:before {
+    content: "\e92a";
+}
+
+.icon-ME1:before {
+    content: "\e929";
+}
+
+.icon-ME2:before {
+    content: "\e94a";
+}
+
+.icon-micro:before {
+    content: "\e937";
+}
+
+.icon-password:before {
+    content: "\e92c";
+}
+
+.icon-search:before {
+    content: "\e92d";
+}
+
+.icon-time2:before {
+    content: "\e938";
+}
+
+.icon-xinfeng:before {
+    content: "\e92b";
+}
+
+.icon-duanxin:before {
+    content: "\e907";
+}
+
+.icon-yuyin:before {
+    content: "\e920";
+}
+
+.icon-zhaopian:before {
+    content: "\e922";
+}
+
+.icon-weizhi:before {
+    content: "\e900";
+}
+
+.icon-wuliu:before {
+    content: "\e901";
+}
+
+.icon-xuanzhong:before {
+    content: "\e902";
+}
+
+.icon-refresh:before {
+    content: "\e958";
+}
+
+.icon-primitive-dot:before {
+    content: "\e955";
+}
+
+.icon-riqi:before {
+    content: "\e956";
+}
+
+.icon-triangle-up:before {
+    content: "\e957";
+}
+
+.icon-triangle-down:before {
+    content: "\e954";
+}
+
+.icon-add:before {
+    content: "\e953";
+}
+
+.icon-xuanzhong2:before {
+    content: "\e952";
+}
+
+.icon-back:before {
+    content: "\e905";
+}
+
+.icon-down:before {
+    content: "\e906";
+}
+
+.icon-up:before {
+    content: "\e908";
+}
+
+.icon-go:before {
+    content: "\e942";
+}
+
+.icon-cancle:before {
+    content: "\e946";
+}
+
+.icon-card:before {
+    content: "\e925";
+}
+
+.icon-comment:before {
+    content: "\e926";
+}
+
+.icon-delete:before {
+    content: "\e927";
+}
+
+.icon-tel:before {
+    content: "\e939";
+}
+
+.icon-left:before {
+    content: "\e909";
+}
+
+.icon-right:before {
+    content: "\e90a";
+}
+
+.icon-cross:before {
+    content: "\e117";
+}
+
+.icon-guanji:before {
+    content: "\e923";
+}
+
+
