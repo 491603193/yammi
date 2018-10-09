@@ -1,14 +1,4 @@
 module.exports = {
-    pages: {
-        index: {
-            entry: 'src/index/main.js',
-            template: 'public/index.html',
-            filename: 'index.html',
-            title: 'Index Page',
-            chunks: ['chunk-vendors', 'chunk-common', 'index']
-        },
-        subpage: 'src/subpage/main.js'
-    },
     baseUrl: process.env.NODE_ENV === 'production' ? './' : './',
     outputDir: 'dist',
     productionSourceMap: false,
@@ -31,4 +21,16 @@ module.exports = {
             }
         },  // 配置多个代理
     },
+    configureWebpack: config => {
+        require('vux-loader').merge(config, {
+            options: {},
+            plugins: ['vux-ui']
+        })
+    },
+    css: undefined,
+    lintOnSave: false,
+    assetsDir: undefined,
+    runtimeCompiler: true, //包含运行时编译器的 Vue 构建版本
+    parallel: undefined
+
 };

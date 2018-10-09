@@ -9,6 +9,7 @@
         name: 'About',
         data() {
             return {
+
             }
         },
         methods: {
@@ -17,6 +18,6 @@
 </script>
 
 <style>
-    /*@import './style/base.css';*/
+    @import './style/base.css';
 
 </style>
