@@ -1,23 +1,24 @@
 <template>
-    <div id="app">
+    <div id="app" style="height:100%;">
         <router-view/>
     </div>
 </template>
 
 <script>
     export default {
-        name: 'About',
+        name: 'App',
+
         data() {
             return {
 
             }
         },
         methods: {
+
         }
     }
 </script>
 
 <style>
     @import './style/base.css';
-
 </style>
