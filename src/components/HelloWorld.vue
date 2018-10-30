@@ -1,7 +1,7 @@
 <template>
     <div class="hello">
         <h1>欢迎</h1>
-        <router-link to="/login">Go to index</router-link>
+        <router-link to="/index">Go to index</router-link>
         <br/>
         <br/>
         <a @click="outLogin">退出登陆</a>
@@ -9,6 +9,7 @@
 </template>
 
 <script>
+    import {setLocalStorage} from  '../common/utils/Location.js'
     export default {
         name: 'HelloWorld',
         props: {
@@ -16,8 +17,8 @@
         },
         methods: {
             outLogin(){
-                this.$store.commit('setIsLogin', false);
-                this.$router.push({name:'login'})
+                setLocalStorage('isLogin',false);
+                this.$router.push({name:'login'});
             }
         }
     }

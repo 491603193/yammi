@@ -4,7 +4,7 @@
             <component v-bind:is="currentTabComponent"/>
         </keep-alive>
         <tabbar @on-index-change="itemClick">
-            <tabbar-item selected>
+            <tabbar-item selected >
                 <img slot="icon" src="../assets/indexBottom/product.png">
                 <img slot="icon-active" src="../assets/indexBottom/product_select.png">
                 <span slot="label">产品</span>
@@ -19,7 +19,7 @@
                 <img slot="icon-active" src="../assets/indexBottom/message_select.png">
                 <span slot="label">消息</span>
             </tabbar-item>
-            <tabbar-item badge="2" >
+            <tabbar-item badge="2">
                 <img slot="icon" src="../assets/indexBottom/center.png">
                 <img slot="icon-active" src="../assets/indexBottom/center_select.png">
                 <span slot="label">我的</span>
@@ -33,27 +33,27 @@
     import Material from '@/components/material/Material.vue'
     import About from '@/components/About.vue'
     import ProductList from '@/components/product/ProductList.vue'
-
-    const height = document.documentElement.clientHeight || document.body.clientHeight;
-    const tabs = ["ProductList","Material"];
-
+    // const height = document.documentElement.clientHeight || document.body.clientHeight;
     export default {
         name: "index",
+        created: function() {
+        },
         data() {
             return {
-                currentTabComponent:tabs[0],
-                value:"",
-                index: 0,
-                height: height-53+"px"
             }
         },
         components: {
             Tabbar, TabbarItem,Material,About,ProductList,XHeader
         },
+        computed: {
+            currentTabComponent () {
+                return this.$store.state.index.currentTabComponent
+            }
+        },
         methods:{
-            itemClick(badge){
+            itemClick(badge,index){
                 this.index = badge;
-                this.currentTabComponent= tabs[this.index];
+                this.$store.commit('setTabIndex',badge);
             }
         }
     }

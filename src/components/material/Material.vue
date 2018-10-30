@@ -60,6 +60,9 @@
             XHeader, XButton, Toast, Divider, Tab, TabItem,
             Previewer, Sticky, Swiper, SwiperItem, ViewBox
         },
+        created: function() {
+            // alert("ready");
+        },
         directives: {
             TransferDom
         },

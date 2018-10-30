@@ -40,23 +40,23 @@ const setLocalStorage = function (key, value) {
     } else {
         value = 'str-' + value;
     }
-    if (session) session.setItem(key, value);
+    if (local) local.setItem(key, value);
 };
 const getLocalStorage = function (key) {
     if (!key)  console.warn('key is empty');
     if (local) {
-        var v = local.getItem(key);
-        if (!v) return false;
-        v = v.slice(4);
-        if (v.indexOf('obj-') === 0) {
+        var value = local.getItem(key);
+        if (!value) return false;
+        var v = value.slice(4);
+        if (value.indexOf('obj-') === 0) {
             return JSON.parse(v);
-        } else if (v.indexOf('boo-') === 0) {
+        } else if (value.indexOf('boo-') === 0) {
             if (v==='true'){
                 return true;
             } else {
                 return false;
             }
-        } else if (v.indexOf('num-') === 0) {
+        } else if (value.indexOf('num-') === 0) {
             return parseInt(v);
         } else {
             return v;
